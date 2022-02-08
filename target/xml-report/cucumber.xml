@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="12.465">
+    <testcase classname="Register_User_Functionality" name="TC01_register_user" time="12.084">
+        <system-out>
+            <![CDATA[When user launches the browser..............................................passed
+And user navigates to home page.............................................passed
+Then user verifies home page is visible.....................................passed
+Then user clicks on signup button...........................................passed
+Then user verifies new user signup is visible...............................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
