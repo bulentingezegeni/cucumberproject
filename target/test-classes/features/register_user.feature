@@ -9,6 +9,7 @@ Feature: Register_User_Functionality
     Then user clicks on signup button
     Then user verifies new user signup is visible
 
+  @second_scenario
   Scenario: TC01_signup_user
     When user enters name and email
     And user clicks signup button
@@ -16,10 +17,11 @@ Feature: Register_User_Functionality
     And user fills details
     And user selects checkbox signup for our newslater
     And user selects checkbox receive special offers
-    And user fills details
+    And user fills other details
     And user clicks create account button
     Then user verifies that acount is created
 
+  @third_scenario
   Scenario: TC01_delete_account
     When user clicks continue button
     And user verifies that logged in

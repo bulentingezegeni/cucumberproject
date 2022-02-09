@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         },
         features = "./src/test/resources/features",
         glue = {"stepdefinitions","hooks"},
-        tags = "@first_scenario",
+        tags = "@register_user",
         dryRun = false
 )
 public class Runner {

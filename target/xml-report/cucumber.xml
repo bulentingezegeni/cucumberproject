@@ -1,12 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="12.465">
-    <testcase classname="Register_User_Functionality" name="TC01_register_user" time="12.084">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="28.584">
+    <testcase classname="Register_User_Functionality" name="TC01_register_user" time="13.161">
         <system-out>
             <![CDATA[When user launches the browser..............................................passed
 And user navigates to home page.............................................passed
 Then user verifies home page is visible.....................................passed
 Then user clicks on signup button...........................................passed
 Then user verifies new user signup is visible...............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Register_User_Functionality" name="TC01_signup_user" time="9.358">
+        <system-out>
+            <![CDATA[When user enters name and email.............................................passed
+And user clicks signup button...............................................passed
+And user verifies that enter account information is visible.................passed
+And user fills details......................................................passed
+And user selects checkbox signup for our newslater..........................passed
+And user selects checkbox receive special offers............................passed
+And user fills other details................................................passed
+And user clicks create account button.......................................passed
+Then user verifies that acount is created...................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Register_User_Functionality" name="TC01_delete_account" time="5.277">
+        <system-out>
+            <![CDATA[When user clicks continue button............................................passed
+And user verifies that logged in............................................passed
+And user clicks delete account button.......................................passed
+Then user verifies that acount deleted......................................passed
 ]]>
         </system-out>
     </testcase>
