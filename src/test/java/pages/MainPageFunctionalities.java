@@ -12,7 +12,7 @@ public class MainPageFunctionalities {
     }
 
     @FindBy(partialLinkText = "Signup")
-    public WebElement signupButton;
+    public WebElement signupLoginButton;
 
 
     @FindBy(xpath = "(//h2)[3]")

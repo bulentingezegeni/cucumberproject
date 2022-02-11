@@ -16,49 +16,49 @@ public class RegisterUserStepDefs {
     MainPageFunctionalities mainPageFunctionalities= new MainPageFunctionalities();
     RegisterUserPage registerUserPage=new RegisterUserPage();
 
-    @Given("user launches the browser")
+    @Given("launch browser")
     public void user_launches_the_browser() {
         Driver.getDriver();
     }
 
-    @Given("user navigates to home page")
+    @Given("navigate to url")
     public void user_navigates_to_home_page() {
         Driver.getDriver().navigate().to(ConfigurationReader.getProperty("automation_url"));
     }
 
-    @Then("user verifies home page is visible")
+    @Then("Verify that home page is visible successfully")
     public void user_verifies_home_page_is_visible() {
         String homepageTitle=Driver.getDriver().getTitle();
         Assert.assertEquals("Automation Exercise",homepageTitle);
     }
 
-    @When("user clicks on signup button")
-    public void user_clicks_on_signup_button() {
-        mainPageFunctionalities.signupButton.click();
+    @When("Click on signup login button")
+    public void user_clicks_on_signup_login_button() {
+        mainPageFunctionalities.signupLoginButton.click();
     }
 
 
-    @Then("user verifies new user signup is visible")
+    @Then("Verify new user signup is visible")
     public void user_verifies_new_user_signup_is_visible() {
         Assert.assertTrue(mainPageFunctionalities.signupText.isDisplayed());
     }
 
-    @When("user enters name and email")
+    @When("Enter name and email address")
     public void user_enters_name_and_email() {
         mainPageFunctionalities.nameBox.sendKeys("Bulent");
         mainPageFunctionalities.emailBox.sendKeys(new Faker().internet().emailAddress());
     }
 
-    @When("user clicks signup button")
+    @When("Click Signup button")
     public void user_clicks_signup_button() {
         mainPageFunctionalities.accountCreatSignupButton.click();
     }
 
-    @When("user verifies that enter account information is visible")
+    @When("Verify that ENTER ACCOUNT INFORMATION is visible")
     public void user_verifies_that_enter_account_information_is_visible() {
         Assert.assertTrue(mainPageFunctionalities.enterAccountInformationText.isDisplayed());
     }
-    @When("user fills details")
+    @When("Fill details: Title, Name, Email, Password, Date of birth")
     public void user_fills_details() {
         registerUserPage.genderBox.click();
         registerUserPage.passwordBox.sendKeys("bt12345!");
@@ -66,16 +66,17 @@ public class RegisterUserStepDefs {
         Driver.selectByIndex(registerUserPage.monthDropdown, 5);
         Driver.selectByIndex(registerUserPage.yearDropdown,22);
     }
-    @When("user selects checkbox signup for our newslater")
+    @When("Select checkbox Sign up for our newsletter!")
     public void user_selects_checkbox_signup_for_our_newslater() {
         registerUserPage.newsletterCheckBox.click();
     }
-    @When("user selects checkbox receive special offers")
+
+    @When("Select checkbox Receive special offers from our partners!")
     public void user_selects_checkbox_receive_special_offers() {
         registerUserPage.specialOffersCheckBox.click();
     }
 
-    @And("user fills other details")
+    @And("Fill details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number")
     public void userFillsOtherDetails() {
         registerUserPage.firstName.sendKeys("bulent");
         registerUserPage.lastName.sendKeys("planet");
@@ -88,7 +89,7 @@ public class RegisterUserStepDefs {
         registerUserPage.mobileNumberBox.sendKeys("+19736745424");
     }
 
-    @When("user clicks create account button")
+    @When("Click Create Account button")
     public void user_clicks_create_account_button() {
         registerUserPage.createAccountButton.click();
     }
@@ -116,7 +117,6 @@ public class RegisterUserStepDefs {
     public void user_verifies_that_acount_deleted() {
         Assert.assertTrue(Driver.getDriver().getTitle().contains("Delete Account"));
     }
-
 
 
 }

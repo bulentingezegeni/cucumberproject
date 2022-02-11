@@ -3,22 +3,22 @@ Feature: Register_User_Functionality
 
   @first_scenario
   Scenario: TC01_register_user
-    When user launches the browser
-    And user navigates to home page
-    Then user verifies home page is visible
-    Then user clicks on signup button
-    Then user verifies new user signup is visible
+    Given launch browser
+    And navigate to url
+    Then Verify that home page is visible successfully
+    Then Click on signup login button
+    Then Verify new user signup is visible
 
   @second_scenario
   Scenario: TC01_signup_user
-    When user enters name and email
-    And user clicks signup button
-    And user verifies that enter account information is visible
-    And user fills details
-    And user selects checkbox signup for our newslater
-    And user selects checkbox receive special offers
-    And user fills other details
-    And user clicks create account button
+    When Enter name and email address
+    And Click Signup button
+    And Verify that ENTER ACCOUNT INFORMATION is visible
+    And Fill details: Title, Name, Email, Password, Date of birth
+    And Select checkbox Sign up for our newsletter!
+    And Select checkbox Receive special offers from our partners!
+    And Fill details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number
+    And Click Create Account button
     Then user verifies that acount is created
 
   @third_scenario
