@@ -1,31 +1,45 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="24.921">
-    <testcase classname="register_user" name="TC01_register_user" time="10.768">
-        <system-out>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="16.918">
+    <testcase classname="contact_us" name="TC06_contact_us_form" time="16.287">
+        <failure message="no such alert&#10;  (Session info: chrome=98.0.4758.102)&#10;Build info: version: '4.1.1', revision: 'e8fcc2cecf'&#10;System info: host: 'bulents-MBP-2', ip: '192.168.1.133', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '11.0.12'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [fed1f0ca2c6c203822440155d396f676, getAlertText {}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: /var/folders/2m/mnx8xt916dn...}, goog:chromeOptions: {debuggerAddress: localhost:65295}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:65295/devtoo..., se:cdpVersion: 98.0.4758.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: fed1f0ca2c6c203822440155d396f676" type="org.openqa.selenium.NoAlertPresentException">
             <![CDATA[Given launch browser........................................................passed
 And navigate to url.........................................................passed
-Then Verify that home page is visible successfully..........................passed
-Then Click on signup login button...........................................passed
-Then Verify new user signup is visible......................................passed
+And Verify that home page is visible successfully...........................passed
+And Click on Contact Us button..............................................passed
+Then Verify GET IN TOUCH is visible.........................................passed
+And Enter name, email, subject and message..................................passed
+And Upload file.............................................................passed
+And Click Submit button.....................................................passed
+And Click OK button.........................................................failed
+Then Verify success message Success! Your details have been submitted successfully. is visible.skipped
+And Click Home button and verify that landed to home page successfully......skipped
+
+StackTrace:
+org.openqa.selenium.NoAlertPresentException: no such alert
+  (Session info: chrome=98.0.4758.102)
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'bulents-MBP-2', ip: '192.168.1.133', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '11.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fed1f0ca2c6c203822440155d396f676, getAlertText {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: /var/folders/2m/mnx8xt916dn...}, goog:chromeOptions: {debuggerAddress: localhost:65295}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:65295/devtoo..., se:cdpVersion: 98.0.4758.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fed1f0ca2c6c203822440155d396f676
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:1095)
+	at stepdefinitions.ContactUsStepDefs.clickOKButton(ContactUsStepDefs.java:51)
+	at ✽.Click OK button(file:///Users/bulentturan/Desktop/work/IDEA%20Java%20Projects/cucumberproject/./src/test/resources/features/contact_us.feature:14)
 ]]>
-        </system-out>
-    </testcase>
-    <testcase classname="register_user" name="TC01_register_user_2" time="13.552">
-        <system-out>
-            <![CDATA[When Enter name and email address...........................................passed
-And Click Signup button.....................................................passed
-And Verify that ENTER ACCOUNT INFORMATION is visible........................passed
-And Fill details: Title, Name, Email, Password, Date of birth...............passed
-And Select checkbox Sign up for our newsletter!.............................passed
-And Select checkbox Receive special offers from our partners!...............passed
-And Fill details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number.passed
-And Click Create Account button.............................................passed
-Then user verifies that acount is created...................................passed
-When user clicks continue button............................................passed
-And user verifies that logged in............................................passed
-And user clicks delete account button.......................................passed
-Then user verifies that acount deleted......................................passed
-]]>
-        </system-out>
+        </failure>
     </testcase>
 </testsuite>

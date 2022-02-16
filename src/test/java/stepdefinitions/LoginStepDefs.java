@@ -35,4 +35,6 @@ public class LoginStepDefs {
         loginPage.loginEmailBox.sendKeys(email);
         loginPage.loginPasswordBox.sendKeys(password);
     }
+
+
 }

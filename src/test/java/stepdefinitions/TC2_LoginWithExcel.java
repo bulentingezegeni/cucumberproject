@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import pages.LoginPage;
@@ -46,6 +47,5 @@ public class TC2_LoginWithExcel {
     public void click_logout_button() {
         loginPage.logoutButton.click();
     }
-
 
 }
