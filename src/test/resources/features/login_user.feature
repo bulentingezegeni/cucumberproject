@@ -1,5 +1,5 @@
 @login_user_correct
-Feature: Login user
+Feature: login_user
 
   @correct_credentials
   Scenario: TC02_login_user_with_correct_email_and_password
@@ -15,3 +15,4 @@ Feature: Login user
     And user verifies that logged in
     And user clicks delete account button
     Then user verifies that acount deleted
+

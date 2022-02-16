@@ -7,16 +7,16 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {
-                "pretty",
-                "html:target/default-cucumber-reports.html",
+                "pretty",// This is used for more readable reports or outputs on console
+                "html:target/default-cucumber-reports.html",// use this report. It is better
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                 "rerun:target/failedRerun.txt"
         },
         features = "./src/test/resources/features",
-        glue = {"stepdefinitions","hooks"},
-        tags = "@login_user2_correct",
+        glue = {"stepdefinitions","hooks"},// run stepdefinitions and hooks folders together
+        tags = "@register_user",
         dryRun = false
 )
 public class Runner {

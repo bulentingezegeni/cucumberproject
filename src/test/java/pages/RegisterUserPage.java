@@ -104,6 +104,9 @@ public class RegisterUserPage {
 
 
 
+    @FindBy(xpath = "//*[text()='Email Address already exist!']")
+    public WebElement emailAddressAlreadyExistText;
+
 
 
 

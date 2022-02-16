@@ -118,5 +118,16 @@ public class RegisterUserStepDefs {
         Assert.assertTrue(Driver.getDriver().getTitle().contains("Delete Account"));
     }
 
+    @When("Verify error Email Address already exist! is visible")
+    public void verify_error_email_address_already_exist_is_visible() {
+        Assert.assertTrue(registerUserPage.emailAddressAlreadyExistText.isDisplayed());
+    }
+
+    @Then("Enter name and existing email address as {string}")
+    public void enter_name_and_existing_email_address_as(String email) {
+        mainPageFunctionalities.nameBox.sendKeys(new Faker().name().username());
+        mainPageFunctionalities.emailBox.sendKeys(email);
+    }
+
 
 }

@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="18.454">
-    <testcase classname="Login user" name="TC02_login_user_with_correct_email_and_password" time="17.966">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="24.921">
+    <testcase classname="register_user" name="TC01_register_user" time="10.768">
         <system-out>
             <![CDATA[Given launch browser........................................................passed
 And navigate to url.........................................................passed
 Then Verify that home page is visible successfully..........................passed
 Then Click on signup login button...........................................passed
-Then Verify login to your account is visible................................passed
-And Enter correct "bulentsplanet@gmail.com" and "bt12345!"..................passed
-And Click login button......................................................passed
+Then Verify new user signup is visible......................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="register_user" name="TC01_register_user_2" time="13.552">
+        <system-out>
+            <![CDATA[When Enter name and email address...........................................passed
+And Click Signup button.....................................................passed
+And Verify that ENTER ACCOUNT INFORMATION is visible........................passed
+And Fill details: Title, Name, Email, Password, Date of birth...............passed
+And Select checkbox Sign up for our newsletter!.............................passed
+And Select checkbox Receive special offers from our partners!...............passed
+And Fill details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number.passed
+And Click Create Account button.............................................passed
+Then user verifies that acount is created...................................passed
+When user clicks continue button............................................passed
 And user verifies that logged in............................................passed
 And user clicks delete account button.......................................passed
 Then user verifies that acount deleted......................................passed
