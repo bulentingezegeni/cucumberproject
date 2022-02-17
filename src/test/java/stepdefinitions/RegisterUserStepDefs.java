@@ -7,13 +7,13 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.RegisterUserPage;
-import pages.MainPageFunctionalities;
+import pages.HomePage;
 import utilities.ConfigurationReader;
 import utilities.Driver;
 
 public class RegisterUserStepDefs {
 
-    MainPageFunctionalities mainPageFunctionalities= new MainPageFunctionalities();
+    HomePage homePage = new HomePage();
     RegisterUserPage registerUserPage=new RegisterUserPage();
 
     @Given("launch browser")
@@ -34,29 +34,29 @@ public class RegisterUserStepDefs {
 
     @When("Click on signup login button")
     public void user_clicks_on_signup_login_button() {
-        mainPageFunctionalities.signupLoginButton.click();
+        homePage.signupLoginButton.click();
     }
 
 
     @Then("Verify new user signup is visible")
     public void user_verifies_new_user_signup_is_visible() {
-        Assert.assertTrue(mainPageFunctionalities.signupText.isDisplayed());
+        Assert.assertTrue(homePage.signupText.isDisplayed());
     }
 
     @When("Enter name and email address")
     public void user_enters_name_and_email() {
-        mainPageFunctionalities.nameBox.sendKeys("Bulent");
-        mainPageFunctionalities.emailBox.sendKeys(new Faker().internet().emailAddress());
+        homePage.nameBox.sendKeys("Bulent");
+        homePage.emailBox.sendKeys(new Faker().internet().emailAddress());
     }
 
     @When("Click Signup button")
     public void user_clicks_signup_button() {
-        mainPageFunctionalities.accountCreatSignupButton.click();
+        homePage.accountCreatSignupButton.click();
     }
 
     @When("Verify that ENTER ACCOUNT INFORMATION is visible")
     public void user_verifies_that_enter_account_information_is_visible() {
-        Assert.assertTrue(mainPageFunctionalities.enterAccountInformationText.isDisplayed());
+        Assert.assertTrue(homePage.enterAccountInformationText.isDisplayed());
     }
     @When("Fill details: Title, Name, Email, Password, Date of birth")
     public void user_fills_details() {
@@ -125,8 +125,8 @@ public class RegisterUserStepDefs {
 
     @Then("Enter name and existing email address as {string}")
     public void enter_name_and_existing_email_address_as(String email) {
-        mainPageFunctionalities.nameBox.sendKeys(new Faker().name().username());
-        mainPageFunctionalities.emailBox.sendKeys(email);
+        homePage.nameBox.sendKeys(new Faker().name().username());
+        homePage.emailBox.sendKeys(email);
     }
 
 

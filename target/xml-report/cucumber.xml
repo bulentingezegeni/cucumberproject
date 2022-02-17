@@ -1,45 +1,81 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="16.918">
-    <testcase classname="contact_us" name="TC06_contact_us_form" time="16.287">
-        <failure message="no such alert&#10;  (Session info: chrome=98.0.4758.102)&#10;Build info: version: '4.1.1', revision: 'e8fcc2cecf'&#10;System info: host: 'bulents-MBP-2', ip: '192.168.1.133', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '11.0.12'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [fed1f0ca2c6c203822440155d396f676, getAlertText {}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: /var/folders/2m/mnx8xt916dn...}, goog:chromeOptions: {debuggerAddress: localhost:65295}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:65295/devtoo..., se:cdpVersion: 98.0.4758.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: fed1f0ca2c6c203822440155d396f676" type="org.openqa.selenium.NoAlertPresentException">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="6" time="52.828">
+    <testcase classname="search_product" name="TC09_search_product" time="16.59">
+        <system-out>
             <![CDATA[Given launch browser........................................................passed
 And navigate to url.........................................................passed
-And Verify that home page is visible successfully...........................passed
-And Click on Contact Us button..............................................passed
-Then Verify GET IN TOUCH is visible.........................................passed
-And Enter name, email, subject and message..................................passed
-And Upload file.............................................................passed
-And Click Submit button.....................................................passed
-And Click OK button.........................................................failed
-Then Verify success message Success! Your details have been submitted successfully. is visible.skipped
-And Click Home button and verify that landed to home page successfully......skipped
-
-StackTrace:
-org.openqa.selenium.NoAlertPresentException: no such alert
-  (Session info: chrome=98.0.4758.102)
-Build info: version: '4.1.1', revision: 'e8fcc2cecf'
-System info: host: 'bulents-MBP-2', ip: '192.168.1.133', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '11.0.12'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [fed1f0ca2c6c203822440155d396f676, getAlertText {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: /var/folders/2m/mnx8xt916dn...}, goog:chromeOptions: {debuggerAddress: localhost:65295}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:65295/devtoo..., se:cdpVersion: 98.0.4758.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: fed1f0ca2c6c203822440155d396f676
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:1095)
-	at stepdefinitions.ContactUsStepDefs.clickOKButton(ContactUsStepDefs.java:51)
-	at ✽.Click OK button(file:///Users/bulentturan/Desktop/work/IDEA%20Java%20Projects/cucumberproject/./src/test/resources/features/contact_us.feature:14)
+Then Verify that home page is visible successfully..........................passed
+And Click on Products button................................................passed
+Then Verify user is navigated to ALL PRODUCTS page successfully.............passed
+And Enter product name as "Tshirt" in search input and click search button..passed
+Then Verify SEARCHED PRODUCTS is visible....................................passed
+Then Verify all the products as "Tshirt" related to search are visible......passed
 ]]>
-        </failure>
+        </system-out>
+    </testcase>
+    <testcase classname="search_product" name="TC09_search_product_2" time="6.286">
+        <system-out>
+            <![CDATA[Given launch browser........................................................passed
+And navigate to url.........................................................passed
+Then Verify that home page is visible successfully..........................passed
+And Click on Products button................................................passed
+Then Verify user is navigated to ALL PRODUCTS page successfully.............passed
+And Enter product name as "Jeans" in search input and click search button...passed
+Then Verify SEARCHED PRODUCTS is visible....................................passed
+Then Verify all the products as "Jeans" related to search are visible.......passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="search_product" name="TC09_search_product_3" time="6.229">
+        <system-out>
+            <![CDATA[Given launch browser........................................................passed
+And navigate to url.........................................................passed
+Then Verify that home page is visible successfully..........................passed
+And Click on Products button................................................passed
+Then Verify user is navigated to ALL PRODUCTS page successfully.............passed
+And Enter product name as "Dress" in search input and click search button...passed
+Then Verify SEARCHED PRODUCTS is visible....................................passed
+Then Verify all the products as "Dress" related to search are visible.......passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="search_product" name="TC09_search_product_4" time="6.784">
+        <system-out>
+            <![CDATA[Given launch browser........................................................passed
+And navigate to url.........................................................passed
+Then Verify that home page is visible successfully..........................passed
+And Click on Products button................................................passed
+Then Verify user is navigated to ALL PRODUCTS page successfully.............passed
+And Enter product name as "Top" in search input and click search button.....passed
+Then Verify SEARCHED PRODUCTS is visible....................................passed
+Then Verify all the products as "Top" related to search are visible.........passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="search_product" name="TC09_search_product_5" time="7.977">
+        <system-out>
+            <![CDATA[Given launch browser........................................................passed
+And navigate to url.........................................................passed
+Then Verify that home page is visible successfully..........................passed
+And Click on Products button................................................passed
+Then Verify user is navigated to ALL PRODUCTS page successfully.............passed
+And Enter product name as "Shirt" in search input and click search button...passed
+Then Verify SEARCHED PRODUCTS is visible....................................passed
+Then Verify all the products as "Shirt" related to search are visible.......passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="search_product" name="TC09_search_product_6" time="8.006">
+        <system-out>
+            <![CDATA[Given launch browser........................................................passed
+And navigate to url.........................................................passed
+Then Verify that home page is visible successfully..........................passed
+And Click on Products button................................................passed
+Then Verify user is navigated to ALL PRODUCTS page successfully.............passed
+And Enter product name as "Short" in search input and click search button...passed
+Then Verify SEARCHED PRODUCTS is visible....................................passed
+Then Verify all the products as "Short" related to search are visible.......passed
+]]>
+        </system-out>
     </testcase>
 </testsuite>
