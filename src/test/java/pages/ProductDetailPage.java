@@ -51,6 +51,28 @@ public class ProductDetailPage {
     public WebElement brand;
 
 
+    @FindBy(id = "quantity")
+    public WebElement quantityBox;
+
+
+    @FindBy(xpath = "//*[@type='button']")
+    public WebElement addToCartButton;
+
+
+    @FindBy(linkText = "View Cart")
+    public WebElement viewCartButton;
+
+
+
+    @FindBy(xpath = "//*[@class='disabled']")
+    public WebElement quantityText;
+
+
+    @FindBy(xpath = "//*[@class='product_image']")
+    public WebElement productImage;
+
+
+
 
 
 

@@ -1,80 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="6" time="52.828">
-    <testcase classname="search_product" name="TC09_search_product" time="16.59">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="36.69">
+    <testcase classname="place_order_register_while_checkout" name="TC14_place_order_register_while_checkout" time="35.708">
         <system-out>
             <![CDATA[Given launch browser........................................................passed
 And navigate to url.........................................................passed
 Then Verify that home page is visible successfully..........................passed
-And Click on Products button................................................passed
-Then Verify user is navigated to ALL PRODUCTS page successfully.............passed
-And Enter product name as "Tshirt" in search input and click search button..passed
-Then Verify SEARCHED PRODUCTS is visible....................................passed
-Then Verify all the products as "Tshirt" related to search are visible......passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="search_product" name="TC09_search_product_2" time="6.286">
-        <system-out>
-            <![CDATA[Given launch browser........................................................passed
-And navigate to url.........................................................passed
-Then Verify that home page is visible successfully..........................passed
-And Click on Products button................................................passed
-Then Verify user is navigated to ALL PRODUCTS page successfully.............passed
-And Enter product name as "Jeans" in search input and click search button...passed
-Then Verify SEARCHED PRODUCTS is visible....................................passed
-Then Verify all the products as "Jeans" related to search are visible.......passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="search_product" name="TC09_search_product_3" time="6.229">
-        <system-out>
-            <![CDATA[Given launch browser........................................................passed
-And navigate to url.........................................................passed
-Then Verify that home page is visible successfully..........................passed
-And Click on Products button................................................passed
-Then Verify user is navigated to ALL PRODUCTS page successfully.............passed
-And Enter product name as "Dress" in search input and click search button...passed
-Then Verify SEARCHED PRODUCTS is visible....................................passed
-Then Verify all the products as "Dress" related to search are visible.......passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="search_product" name="TC09_search_product_4" time="6.784">
-        <system-out>
-            <![CDATA[Given launch browser........................................................passed
-And navigate to url.........................................................passed
-Then Verify that home page is visible successfully..........................passed
-And Click on Products button................................................passed
-Then Verify user is navigated to ALL PRODUCTS page successfully.............passed
-And Enter product name as "Top" in search input and click search button.....passed
-Then Verify SEARCHED PRODUCTS is visible....................................passed
-Then Verify all the products as "Top" related to search are visible.........passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="search_product" name="TC09_search_product_5" time="7.977">
-        <system-out>
-            <![CDATA[Given launch browser........................................................passed
-And navigate to url.........................................................passed
-Then Verify that home page is visible successfully..........................passed
-And Click on Products button................................................passed
-Then Verify user is navigated to ALL PRODUCTS page successfully.............passed
-And Enter product name as "Shirt" in search input and click search button...passed
-Then Verify SEARCHED PRODUCTS is visible....................................passed
-Then Verify all the products as "Shirt" related to search are visible.......passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="search_product" name="TC09_search_product_6" time="8.006">
-        <system-out>
-            <![CDATA[Given launch browser........................................................passed
-And navigate to url.........................................................passed
-Then Verify that home page is visible successfully..........................passed
-And Click on Products button................................................passed
-Then Verify user is navigated to ALL PRODUCTS page successfully.............passed
-And Enter product name as "Short" in search input and click search button...passed
-Then Verify SEARCHED PRODUCTS is visible....................................passed
-Then Verify all the products as "Short" related to search are visible.......passed
+And Add products to cart....................................................passed
+And Click Cart button.......................................................passed
+And Verify that cart page is displayed......................................passed
+And Click Proceed To Checkout...............................................passed
+And Click Register Login button.............................................passed
+When Enter name and email address...........................................passed
+And Click Signup button.....................................................passed
+And Verify that ENTER ACCOUNT INFORMATION is visible........................passed
+And Fill details: Title, Name, Email, Password, Date of birth...............passed
+And Select checkbox Sign up for our newsletter!.............................passed
+And Select checkbox Receive special offers from our partners!...............passed
+And Fill details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number.passed
+And Click Create Account button.............................................passed
+Then user verifies that acount is created...................................passed
+When user clicks continue button............................................passed
+And user verifies that logged in............................................passed
+And Click Cart button.......................................................passed
+And Click Proceed To Checkout button........................................passed
+And Verify Address Details and Review Your Order............................passed
+And Enter description in comment text area and click Place Order............passed
+And Enter payment details: Name on Card, Card Number, CVC, Expiration date..passed
+And Click Pay and Confirm Order button......................................passed
+Then Verify success message Your order has been placed successfully!........passed
+And user clicks delete account button.......................................passed
+Then user verifies that acount deleted......................................passed
 ]]>
         </system-out>
     </testcase>
