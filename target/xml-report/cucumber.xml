@@ -1,35 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="36.69">
-    <testcase classname="place_order_register_while_checkout" name="TC14_place_order_register_while_checkout" time="35.708">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="21.112">
+    <testcase classname="view_cart_brand_products" name="TC19_view_cart_brand_products" time="20.573">
         <system-out>
             <![CDATA[Given launch browser........................................................passed
 And navigate to url.........................................................passed
-Then Verify that home page is visible successfully..........................passed
-And Add products to cart....................................................passed
-And Click Cart button.......................................................passed
-And Verify that cart page is displayed......................................passed
-And Click Proceed To Checkout...............................................passed
-And Click Register Login button.............................................passed
-When Enter name and email address...........................................passed
-And Click Signup button.....................................................passed
-And Verify that ENTER ACCOUNT INFORMATION is visible........................passed
-And Fill details: Title, Name, Email, Password, Date of birth...............passed
-And Select checkbox Sign up for our newsletter!.............................passed
-And Select checkbox Receive special offers from our partners!...............passed
-And Fill details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number.passed
-And Click Create Account button.............................................passed
-Then user verifies that acount is created...................................passed
-When user clicks continue button............................................passed
-And user verifies that logged in............................................passed
-And Click Cart button.......................................................passed
-And Click Proceed To Checkout button........................................passed
-And Verify Address Details and Review Your Order............................passed
-And Enter description in comment text area and click Place Order............passed
-And Enter payment details: Name on Card, Card Number, CVC, Expiration date..passed
-And Click Pay and Confirm Order button......................................passed
-Then Verify success message Your order has been placed successfully!........passed
-And user clicks delete account button.......................................passed
-Then user verifies that acount deleted......................................passed
+And Click on Products button................................................passed
+And Verify that Brands are visible on left side bar.........................passed
+And Click on any brand name.................................................passed
+Then Verify that user is navigated to brand page and brand products are displayed.passed
+And On left side bar, click on any other brand link.........................passed
+Then Verify that user is navigated to that brand page and can see products..passed
 ]]>
         </system-out>
     </testcase>

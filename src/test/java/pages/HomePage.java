@@ -30,6 +30,22 @@ public class HomePage {
     public WebElement enterAccountInformationText;
 
 
+    @FindBy(id = "accordian")
+    public WebElement categories;
+
+    @FindBy(linkText = "WOMEN")
+    public WebElement womenCategoryButton;
+
+    @FindBy(xpath = "//*[@href='/category_products/1']")
+    public WebElement dressButton;
+
+
+
+
+
+
+
+
 
 
 }

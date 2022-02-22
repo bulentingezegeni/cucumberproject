@@ -4,11 +4,11 @@ import com.github.javafaker.Faker;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import pages.PlaceOrderAndRegisterPage;
+import pages.RegisterWhileCheckoutPage;
 
-public class PlaceOrderAndRegisterStepDefs {
+public class RegisterWhileCheckoutStepDefs {
 
-    PlaceOrderAndRegisterPage placeOrderAndRegisterPage = new PlaceOrderAndRegisterPage();
+    RegisterWhileCheckoutPage placeOrderAndRegisterPage = new RegisterWhileCheckoutPage();
 
     @Then("Add products to cart")
     public void add_products_to_cart() {

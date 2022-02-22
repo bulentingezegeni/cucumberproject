@@ -5,9 +5,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class PlaceOrderAndRegisterPage {
+public class RegisterWhileCheckoutPage {
 
-    public PlaceOrderAndRegisterPage() {
+    public RegisterWhileCheckoutPage() {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
