@@ -23,6 +23,9 @@ public class CartPage {
     public WebElement deleteSecondProductFromCart;
 
 
+    @FindBy(xpath = "//tbody")
+    public WebElement productsTable;
+
 
 }
 

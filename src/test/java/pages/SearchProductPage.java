@@ -25,6 +25,18 @@ public class SearchProductPage {
     @FindBy(xpath = "//*[@class='productinfo text-center']")
     public List<WebElement> listedProducts;
 
+    @FindBy(xpath = "//*[@class='btn btn-default add-to-cart']")
+    public List<WebElement> searchedProductsList;
+
+    //*[@class='btn btn-default add-to-cart']
+
+
+
+
+
+
+
+
 
 
 

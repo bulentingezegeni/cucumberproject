@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="21.112">
-    <testcase classname="view_cart_brand_products" name="TC19_view_cart_brand_products" time="20.573">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="33.667">
+    <testcase classname="verify_cart_after_login" name="TC20_search_products_and_verify_cart_after_login" time="33.248">
         <system-out>
             <![CDATA[Given launch browser........................................................passed
 And navigate to url.........................................................passed
 And Click on Products button................................................passed
-And Verify that Brands are visible on left side bar.........................passed
-And Click on any brand name.................................................passed
-Then Verify that user is navigated to brand page and brand products are displayed.passed
-And On left side bar, click on any other brand link.........................passed
-Then Verify that user is navigated to that brand page and can see products..passed
+Then Verify user is navigated to ALL PRODUCTS page successfully.............passed
+And Enter product name in search input and click search button..............passed
+Then Verify SEARCHED PRODUCTS is visible....................................passed
+Then Verify all the products related to search are visible..................passed
+And Add products to cart....................................................passed
+And Click Cart button and verify that products are visible in cart..........passed
+And Click Signup Login button and submit login details......................passed
+And Again, go to Cart page..................................................passed
+Then Verify that those products are visible in cart after login as well.....passed
 ]]>
         </system-out>
     </testcase>

@@ -40,6 +40,10 @@ public class HomePage {
     public WebElement dressButton;
 
 
+    @FindBy(xpath = "//*[@href='/view_cart']")
+    public WebElement cartButton;
+
+
 
 
 
